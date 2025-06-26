@@ -1,0 +1,9 @@
+---
+- name: Install Software (from Survey)
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install {{ pkg_name }}
+      ansible.builtin.package:
+        name: "{{ package_name }}"
+        state: present
