@@ -3,7 +3,7 @@
   hosts: all
   become: yes
   tasks:
-    - name: Install {{ pkg_name }}
+    - name: Install {{ package_name }}
       ansible.builtin.package:
-        name: "{{ pkg_name }}"
+        name: "{{ package_name }}"
         state: present
